@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            rock paper game
+        </title>
+        <body>
+            <p>
+                Rock Paper Scissors
+
+            </p>
+            <button
+     onclick = "     
+ finialresult('rock');
+      
+      "
+            
+            >Rock</button>
+            <button
+            onclick = "
+  finialresult('paper');
+    
+    console.log(result);
+    alert(` you picked paper . computerpick ${computerMove}.${result}`);
+            "
+            
+            >Paper</button>
+            <button    onclick = "  
+            finialresult('scissors');
+       
+         "
+       
+            
+            >Scissors</button>
+      <script>
+        function finialresult ( playermove) {
+            const computerMove=   pickcomputermove();   
+            let result = '';   
+            console.log(computerMove);
+
+            if(playermove === 'scissors') {
+                if (computerMove === 'rock') {
+                    result = 'you are lose';
+                      }
+                      else if ( computerMove === 'paper') {
+                        result = 'your win'
+                      }
+                      else if ( computerMove === 'scissor') {
+                     result = 'tie'
+                      }
+                      console.log(result);
+            }
+            else if (playermove === 'paper') {
+                if (computerMove === 'rock') {
+                    result = 'your are win'
+                 }
+                else if (computerMove === 'paper') {
+                    result = 'tie'
+                }
+                else if (computerMove === 'scissor') {
+                    result = 'your are lose'
+                }
+
+            }
+            else if ( playermove === 'rock') {
+                if (computerMove === 'rock') {
+                    result = 'tie';
+                      }
+                      else if ( computerMove === 'paper') {
+                        result = 'your are lose'
+                      }
+                      else if ( computerMove === 'scissor') {
+                     result = 'your win'
+                      }
+            }
+          console.log(result)
+            alert(` you picked ${playermove} . computerpick ${computerMove}.${result}`);
+            
+          
+        }
+
+
+
+
+ function pickcomputermove() {
+    let computerMove = '';
+        const randomNumber = Math.random();
+    if ( randomNumber >= 0 && randomNumber <= 1/3 ) {
+    computerMove = 'rock';
+    }
+    else if ( randomNumber >= 1/3 && randomNumber <= 2/3)
+    { computerMove ='paper'
+    }
+    else if ( randomNumber >= 2/3 && randomNumber <= 1)
+    {
+    computerMove = 'scissor'
+    }
+    return computerMove;
+ }
+
+        
+      </script>
+
+
+        </body>
+    </head>
+</html>

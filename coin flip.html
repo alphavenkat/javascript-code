@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            coin filp game
+        </title>
+<style>
+.headbutton ,
+.tail {
+    background-color: blue;
+    color: white;
+    width: 70px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer;
+
+}
+.headbutton:hover {
+    background-color: white;
+}
+.headbutton:active {
+    background-color: red;
+}
+
+</style>
+
+
+        <script>
+          
+
+
+
+        </script>
+    </head>
+</html>
+<button class="headbutton"
+onclick="
+const computermove = Math.random();
+let message= '';
+let result ='head';
+let resultmessage = '';
+
+if (computermove <= 0.5 ) {
+ message = 'head'
+}
+else
+message ='tail'
+
+if (  result === message) {
+ resultmessage = ' tai'
+}
+else 
+
+    resultmessage = 'you are lose'
+
+console.log(message);
+console.log(resultmessage)
+
+alert(`you pick head .computerpick ${message}. ${resultmessage}`)
+">
+
+ 
+head</button>
+<button class="tail"
+onclick="
+const computermove = Math.random();
+let message= '';
+let result = 'tail';
+let resultmessage = '';
+
+if ( computermove >= 0.5    ) {
+    message = 'tail'
+}
+else
+message = 'head'
+console.log(message);
+console.log(resultmessage)
+if (result === message) {
+    resultmessage = ' tai'
+   }
+   else
+   resultmessage = 'you are lose'
+alert(`you pick tail .computerpick ${message},${resultmessage}`)
+"
+>tail</button>
